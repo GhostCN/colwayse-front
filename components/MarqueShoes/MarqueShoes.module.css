@@ -1,18 +1,20 @@
-.categorieShoes{
-  display: grid;
-  gap: 30px;
-  grid-template-columns: repeat(2,1fr);
+.marque{
+border:1px solid rgba(0,0,0,.125);
+  border-radius: 20px;
+  padding: 10px;
+  width: 70%;
+  text-align: center;
+  cursor: pointer;
 }
-.othersProduct{
-  display: grid;
-  gap: 20px;
-  grid-template-rows: repeat(2,1fr);
+.active{
+  background-color: #f25862;
+  color: #eaeaea;
 }
-.categorieShoes img{
-transition: all 0.4s ease;
-}
-
-.categorieShoes img:hover{
-  opacity: 0.8;
-  transform: scale(1.05);
+@media only screen and (max-width: 768px){
+  .marque{
+    width: 100%;
+  }
+  .marque > span{
+    font-size: 13px;
+  }
 }

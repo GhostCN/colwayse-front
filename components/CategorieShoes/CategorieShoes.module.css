@@ -1,0 +1,27 @@
+.categorieShoes{
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2,1fr);
+}
+.othersProduct{
+  display: grid;
+  gap: 20px;
+  grid-template-rows: repeat(2,1fr);
+}
+.categorieShoes img{
+transition: all 0.4s ease;
+}
+
+.categorieShoes img:hover{
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+@media only screen and (max-width: 768px){
+  .categorieShoes{
+    grid-template-columns: unset;
+    width: 92vw !important;
+  }
+  .categorieShoes img{
+    width: 92vw !important;
+  }
+}

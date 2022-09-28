@@ -1,0 +1,45 @@
+.shoesName{
+font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+.price{
+  color: #f25862;
+  font-weight: bolder;
+}
+.cardText a{
+  text-decoration: underline;
+  color: black;
+}
+.card {
+  width: 18rem;
+}
+.card:hover{
+  transform: scale(1);
+}
+.feauredShoes{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4,1fr);
+}
+.detailProduct{
+  height: 60vh;
+}
+.otherShoes{
+  max-width: 10%;
+}
+.cardImage{
+  min-height: 16vw;
+}
+@media only screen and (max-width: 410px)
+{
+  .card{
+    width: 17rem !important;
+  }
+  .detailProduct{
+    height: 40vh;
+  }
+  .otherShoes{
+    max-width: 25%;
+  }
+}
