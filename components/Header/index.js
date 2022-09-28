@@ -1,9 +1,10 @@
-const Layout=()=>{
+import Menu from "./menu";
+const Header=()=>{
   return (
     <>
-
+      <Menu/>
     </>
   )
 }
 
-export default Layout
+export default Header

@@ -1,0 +1,40 @@
+.carousel-caption{
+  right: 59% !important;
+  top: 35%;
+  width: 38%;
+  line-height: 2.5;
+}
+.carousel-caption h1{
+  color: black;
+  transition: all 1s ease-in-out;
+  animation-name: bounce ;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+.menu-item .nav-link{
+  color: black !important;
+  font-weight: bolder;
+   margin-right: 10px;
+}
+.menu-item .nav-link:hover{
+  color: #f25862 !important
+}
+.btn-slider:hover{
+  background-color: #f25862 !important;
+  color: #eaeaea !important;
+}
+.btn-slider{
+  color: black !important;
+  border-color:black ;
+}
+@keyframes bounce {
+  from {
+    transform: scale(1);
+  }
+to {
+    transform: scale(1.2);
+  }
+}
