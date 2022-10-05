@@ -2,16 +2,11 @@ import {Media, MediaContextProvider} from "../../utils/Media";
 import Layout from "../../components/Layout";
 import {Grid} from "../../utils/Display";
 import ProductUi from "../../components/FeaturedProduct/ProductUi";
-import {parseCookies} from "nookies";
 import {Application} from "../../lib/Application";
 import {ROUTE_ALL_PRODUCT} from "../../utils/Constante";
-import {useEffect, useState} from "react";
+
 
 const AllProducts=({products})=>{
-  useEffect(()=>{
-
-  },[])
-
   return(
     <Layout>
       {products?.length > 0 &&

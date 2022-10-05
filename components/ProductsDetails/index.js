@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import ModalCenter from "../Modal";
 import {Image} from "react-bootstrap";
 import styles from '../../styles/ProductUi.module.css'
+import {useRouter} from "next/router";
 
 const ProductsDetails=({product})=>{
   const styleTitle={
@@ -9,13 +10,14 @@ const ProductsDetails=({product})=>{
     fontFamily:"italic"
   }
   const [image,setImage]=useState(product?.image?.data?.attributes?.url)
+  const router=useRouter()
   const changeImage = (img) => {
     return setImage(img)
   }
   useEffect(()=>{
-   changeImage(image)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[image])
+    console.log(product?.image?.data?.attributes?.url)
+   changeImage(product?.image?.data?.attributes?.url)
+  },[product,router])
 
   const [modalShow, setModalShow]=useState(false)
   return(

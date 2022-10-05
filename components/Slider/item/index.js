@@ -11,7 +11,7 @@ export const SliderItem=({name,description,image})=>{
       />
       <Carousel.Caption>
         <h1>{name}</h1>
-        <p style={{color:"black"}} className="d-md-block d-none">{description}</p>
+        <p style={{color:"black"}} className="d-block">{description}</p>
         <a className="btn btn-outline-light btn-slider">Acheter</a>
       </Carousel.Caption>
     </Carousel.Item>
