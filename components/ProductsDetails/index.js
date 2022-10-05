@@ -23,7 +23,7 @@ const ProductsDetails=({product})=>{
     <>
       <div className={`container d-flex justify-content-between flex-md-row flex-column p-0`}>
         <div className={`border w-md-50 w-100 mt-md-5 mt-5 ${styles.detailProduct}`} style={{border:"1px #dfdfdf"}}>
-          {image &&  <Image src={process.env.NEXT_PUBLIC_IMG_SERVER+image} alt="" className="w-100 h-100"/>}
+          {image &&  <Image src={process.env.NEXT_PUBLIC_IMG_SERVER+image} alt="" className="w-100 h-100" style={{transform:"scale(0.8)"}}/>}
         </div>
         <div className="mt-md-5 border p-md-5 px-5 pb-4 w-md-50 w-100">
          <h2 className="font-italic font-weight-bolder text-center" style={{marginTop:20,color:"#f25862"}}>{product?.name}</h2>
