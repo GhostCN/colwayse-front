@@ -15,7 +15,6 @@ const ProductsDetails=({product})=>{
     return setImage(img)
   }
   useEffect(()=>{
-    console.log(product?.image?.data?.attributes?.url)
    changeImage(product?.image?.data?.attributes?.url)
   },[product,router])
 
