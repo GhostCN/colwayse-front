@@ -22,9 +22,6 @@ font-size: 24px;
   gap: 10px;
   grid-template-columns: repeat(4,1fr);
 }
-.detailProduct{
-  height: 70vh;
-}
 .otherShoes{
   max-width: 10%;
 }
@@ -35,9 +32,6 @@ font-size: 24px;
 {
   .card{
     width: 17rem !important;
-  }
-  .detailProduct{
-    height: 40vh;
   }
   .otherShoes{
     max-width: 25%;
