@@ -23,10 +23,19 @@ font-size: 24px;
   grid-template-columns: repeat(4,1fr);
 }
 .otherShoes{
-  max-width: 10%;
+  max-width: 15%;
 }
 .cardImage{
   min-height: 16vw;
+  transform: scale(0.9);
+}
+.badge{
+  border: 1px solid #dfdfdf;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  width: 4vw;
 }
 @media only screen and (max-width: 410px)
 {
@@ -34,6 +43,6 @@ font-size: 24px;
     width: 17rem !important;
   }
   .otherShoes{
-    max-width: 25%;
+    min-width: 35%;
   }
 }

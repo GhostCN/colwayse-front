@@ -36,6 +36,7 @@ height: 400px;
 }
 body.modal-open {
   overflow: hidden;
+  position: absolute;
 }
 
 .personal-info > ul > li > .icone{

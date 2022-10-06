@@ -17,9 +17,15 @@ const ProductUi=({name,image,size,price,marque,tendance,bigFormat })=>{
            <p><span style={{color:"gray"}}>Pointure</span> {size}</p>
            <span><span style={{color:"gray"}}>Prix</span><span className={styles.price}> {price}</span></span>
          </div>
-        <Link href={'/products/'+name?.toLowerCase().replaceAll(' ', '-')}>
-          <a className="btn btn-outline-light btn-slider">Voir en détails</a>
-        </Link>
+        <div className="d-flex justify-content-between">
+          <Link href={'/products/'+name?.toLowerCase().replaceAll(' ', '-')}>
+            <a className="btn btn-outline-light btn-slider">Voir en détails</a>
+          </Link>
+          <div className={styles.badge}>
+            <span style={{color:"#f25862"}}>Vendu</span>
+          </div>
+        </div>
+
 
       </Card.Body>
     </Card>
