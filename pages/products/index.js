@@ -32,8 +32,6 @@ const AllProducts=({products})=>{
           </div>
         </Media>
       </MediaContextProvider>
-
-
       }
 
     </Layout>

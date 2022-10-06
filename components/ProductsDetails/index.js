@@ -38,7 +38,7 @@ const ProductsDetails=({product})=>{
             <span className="font-weight-bolder" style={styleTitle}> Price</span> <span className="font-weight-bolder"  style={{color:"#f25862"}}>{product?.price}</span>
           </div>
           <div className="d-flex justify-content-center">
-            <a className="btn btn-outline-light btn-slider mt-md-4 w-50" style={{fontSize:"20px"}} onClick={()=>setModalShow(true)}>Acheter directement</a>
+            <a className="btn btn-outline-light btn-slider mt-md-4 w-100 w-md-50" style={{fontSize:"20px"}} onClick={()=>setModalShow(true)}>Acheter directement</a>
           </div>
 
           {/*<div className="d-flex justify-content-between flex-md-row flex-column">
