@@ -25,7 +25,7 @@ const MarqueShoes=({products})=>{
  // selected >0 &&  shoes.current.scrollIntoView({ behavior: "smooth" })
     const timer=setTimeout(()=>{
      setIsLoading(true)
-    },1000)
+    },500)
 return ()=>{
       setIsLoading(false)
       clearTimeout(timer)

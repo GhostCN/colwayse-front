@@ -52,4 +52,10 @@ font-size: 24px;
     justify-content: center;
     place-items: center;
   }
+  .cardImage{
+    max-height: unset;
+  }
+  .card {
+    height: 100vw;
+  }
 }
