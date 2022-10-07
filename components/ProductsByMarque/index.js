@@ -14,7 +14,7 @@ const ProductsByMarque = ({products, titre,selectedMarque}) => {
           <p style={styleP}>{titre}</p>
           <div className={styles.feauredShoes}>
             {
-              products?.length  > 0 && selectedMarque && products.map((product,index)=> product.attributes.marque===selectedMarque && <ProductUi key={index} name={product.attributes.name} image={product.attributes.image} price={product.attributes.price} size={product.attributes.size} marque={product.attributes.marque}/>
+              products?.length  > 0 && selectedMarque && products.map((product,index)=> product.attributes.marque===selectedMarque && <ProductUi key={index} id={product.id} name={product.attributes.name} image={product.attributes.image} price={product.attributes.price} size={product.attributes.size} marque={product.attributes.marque}/>
               )
             }
           </div>

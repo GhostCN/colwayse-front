@@ -19,7 +19,7 @@ export async function getStaticPaths() {
   let pages = [];
   products?.map((element) => pages.push({
     params: {
-      id: element?.attributes?.name.toLowerCase().replaceAll(' ', '-')
+      id: element?.attributes?.name.toLowerCase().replaceAll(' ', '-')+'_'+element.id
     }
   }))
   return {
@@ -34,7 +34,7 @@ export async function getStaticProps({params}) {
   const products = await Application.getData({token: tokenResponse, url: ROUTE_ALL_PRODUCT})
   let product = {};
   products?.map((element) => {
-      if (element?.attributes?.name.toLowerCase() === id.replaceAll('-', ' ')){
+      if (element?.attributes?.name.toLowerCase() === id.split('_')[0].replaceAll('-', ' ')){
         return product = element
       }
     }

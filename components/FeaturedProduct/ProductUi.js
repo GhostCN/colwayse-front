@@ -4,11 +4,11 @@ import styles from '../../styles/ProductUi.module.css'
 import {useState} from "react";
 import {AiFillHeart} from "react-icons/ai";
 import {getImage} from "../../utils/getImage";
-const ProductUi=({name,image,size,price,marque,tendance,bigFormat })=>{
+const ProductUi=({id,name,image,size,price,marque,tendance,bigFormat })=>{
   const [isLiked,setIsLiked]=useState(false)
   return(
     <Card  bsPrefix="card" className={`${styles.card} ${bigFormat?'w-100':''}`}>
-      <Link href={'/products/'+name?.toLowerCase().replaceAll(' ', '-')}>
+      <Link href={'/products/'+name?.toLowerCase().replaceAll(' ', '-').concat('_',id)}>
         <a><Card.Img variant="top" src={getImage(image)} className={styles.cardImage}/></a>
       </Link>
       <Card.Body>
@@ -18,7 +18,7 @@ const ProductUi=({name,image,size,price,marque,tendance,bigFormat })=>{
            <span><span style={{color:"gray"}}>Prix</span><span className={styles.price}> {price}</span></span>
          </div>
         <div className="d-flex justify-content-between">
-          <Link href={'/products/'+name?.toLowerCase().replaceAll(' ', '-')}>
+          <Link href={'/products/'+name?.toLowerCase().replaceAll(' ', '-').concat('_',id)}>
             <a className="btn btn-outline-light btn-slider">Voir en détails</a>
           </Link>
           <div className={styles.badge}>

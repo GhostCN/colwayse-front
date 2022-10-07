@@ -23,11 +23,11 @@ font-size: 24px;
   grid-template-columns: repeat(4,1fr);
 }
 .otherShoes{
-  max-width: 15%;
+  max-width: 15% !important;
 }
 .cardImage{
-  min-height: 16vw;
-  transform: scale(0.8);
+  max-height: 15vw;
+  transform: scale(0.75);
 }
 .badge{
   border: 1px solid #dfdfdf;
@@ -43,6 +43,13 @@ font-size: 24px;
     width: 17rem !important;
   }
   .otherShoes{
-    min-width: 35%;
+    min-width: 35% !important;
+  }
+  .badge {
+    border: 1px solid #dfdfdf;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    place-items: center;
   }
 }

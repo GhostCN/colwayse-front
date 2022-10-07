@@ -4,8 +4,6 @@ import {Grid} from "../../utils/Display";
 import ProductUi from "../../components/FeaturedProduct/ProductUi";
 import {Application} from "../../lib/Application";
 import {ROUTE_ALL_PRODUCT} from "../../utils/Constante";
-
-
 const AllProducts=({products})=>{
   return(
     <Layout>
@@ -16,7 +14,7 @@ const AllProducts=({products})=>{
             <h2 className="font-italic mb-4">All products</h2>
             <Grid rowGap={40} columnGap={40} repeat={3}>
               {products?.length > 0 && products?.map((product,index)=>
-                <ProductUi key={index} name={product?.attributes?.name} image={product?.attributes?.image} price={product?.attributes?.price} size={product?.attributes?.size} marque={product?.attributes?.marque} bigFormat={true}/>
+                <ProductUi key={index} id={product?.id} name={product?.attributes?.name} image={product?.attributes?.image} price={product?.attributes?.price} size={product?.attributes?.size} marque={product?.attributes?.marque} bigFormat={true}/>
               )}
             </Grid>
           </div>
@@ -26,7 +24,7 @@ const AllProducts=({products})=>{
             <h2 className="font-italic mb-4">All products</h2>
             <div className="colShoes">
               {products?.length > 0 && products.map((product,index)=>
-                <ProductUi key={index} name={product?.attributes?.name} image={product?.attributes?.image} price={product?.attributes?.price} size={product?.attributes?.size} marque={product?.attributes?.marque} bigFormat={true}/>
+                <ProductUi key={index} id={product?.id} name={product?.attributes?.name} image={product?.attributes?.image} price={product?.attributes?.price} size={product?.attributes?.size} marque={product?.attributes?.marque} bigFormat={true}/>
               )}
             </div>
           </div>
@@ -43,7 +41,6 @@ export async function getStaticProps() {
   const products = await Application.getData({token: tokenResponse, url: ROUTE_ALL_PRODUCT})
   const props = {
     'products': products,
-
   };
   return {
     props,
