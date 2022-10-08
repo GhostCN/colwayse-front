@@ -4,8 +4,14 @@ import styles from '../../styles/ProductUi.module.css'
 import {useState} from "react";
 import {AiFillHeart} from "react-icons/ai";
 import {getImage} from "../../utils/getImage";
-const ProductUi=({id,name,image,size,price,marque,tendance,bigFormat })=>{
+const ProductUi=({id,name,image,size,price,marque,tendance,bigFormat,isAvailable })=>{
   const [isLiked,setIsLiked]=useState(false)
+  const badges = [
+    { message: 'Dispo', icon: '😍' },
+    { message: 'Promo', icon: '🎁' },
+    { message: 'Nouveau', icon: '⭐️'},
+    { message: 'Vendu', icon: '🤗️'}
+  ];
   return(
     <Card  bsPrefix="card" className={`${styles.card} ${bigFormat?'w-100':''}`}>
       <Link href={'/products/'+name?.toLowerCase().replaceAll(' ', '-').concat('_',id)}>
@@ -21,9 +27,16 @@ const ProductUi=({id,name,image,size,price,marque,tendance,bigFormat })=>{
           <Link href={'/products/'+name?.toLowerCase().replaceAll(' ', '-').concat('_',id)}>
             <a className="btn btn-outline-light btn-slider">Voir en détails</a>
           </Link>
-          <div className={styles.badge}>
-            <span style={{color:"#f25862"}}>Vendu</span>
-          </div>
+          {
+              badges.map((badge)=>badge.message===isAvailable &&
+                <div className={styles.badge}>
+                  <span>{badge.icon}</span>
+                <span style={{color:"#f25862"}}>{badge.message}</span>
+              </div>
+            )
+          }
+
+
         </div>
 
 

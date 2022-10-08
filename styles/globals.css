@@ -79,6 +79,7 @@ body.modal-open {
   }
   .colShoes > .card{
     width: 100% !important;
+    height: 108vw;
   }
   .card-body > a {
     color: white !important;

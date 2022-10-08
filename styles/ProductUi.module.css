@@ -30,12 +30,12 @@ font-size: 24px;
   transform: scale(0.75);
 }
 .badge{
-  border: 1px solid #dfdfdf;
-  border-radius: 10px;
+  border: 1px solid #f25862;
+  border-radius: 15px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   place-items: center;
-  width: 4vw;
+  width: 5.5vw;
 }
 @media only screen and (max-width: 410px)
 {
@@ -46,16 +46,17 @@ font-size: 24px;
     min-width: 35% !important;
   }
   .badge {
-    border: 1px solid #dfdfdf;
+    border: 1px solid #f25862;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     place-items: center;
+    width: 30%;
   }
   .cardImage{
-    max-height: unset;
+    max-height: 75vw;
   }
   .card {
-    height: 100vw;
+    height: 92vw;
   }
 }

@@ -32,7 +32,7 @@ const FeaturedProduct = ({products, titre}) => {
           }} modules={[Autoplay]}>
             {
               products?.length > 0 && products.map((product, index) => product.attributes.tendance &&
-                <SwiperSlide key={index} ><ProductUi name={product.attributes.name} image={product.attributes.image} price={product.attributes.price} size={product.attributes.size} marque={product.attributes.marque} id={product?.id} /> </SwiperSlide>
+                <SwiperSlide key={index} ><ProductUi isAvailable={product?.attributes?.isAvailable}  name={product.attributes.name} image={product.attributes.image} price={product.attributes.price} size={product.attributes.size} marque={product.attributes.marque} id={product?.id} /> </SwiperSlide>
               )
             }
           </Swiper>
@@ -47,7 +47,7 @@ const FeaturedProduct = ({products, titre}) => {
             <div className="colShoes">
               {
                 products?.length > 0 && products.map((product, index) => product.attributes.tendance &&
-                  <ProductUi key={index} name={product.attributes.name} image={product.attributes.image} price={product.attributes.price} size={product.attributes.size} marque={product.attributes.marque} id={product?.id}/>
+                  <ProductUi key={index} isAvailable={product?.attributes?.isAvailable}  name={product.attributes.name} image={product.attributes.image} price={product.attributes.price} size={product.attributes.size} marque={product.attributes.marque} id={product?.id}/>
                 )
               }
             </div>

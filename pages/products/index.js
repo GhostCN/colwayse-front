@@ -14,7 +14,7 @@ const AllProducts=({products})=>{
             <h2 className="font-italic mb-4">All products</h2>
             <Grid rowGap={40} columnGap={40} repeat={3}>
               {products?.length > 0 && products?.map((product,index)=>
-                <ProductUi key={index} id={product?.id} name={product?.attributes?.name} image={product?.attributes?.image} price={product?.attributes?.price} size={product?.attributes?.size} marque={product?.attributes?.marque} bigFormat={true}/>
+                <ProductUi key={index} isAvailable={product?.attributes?.isAvailable}  id={product?.id} name={product?.attributes?.name} image={product?.attributes?.image} price={product?.attributes?.price} size={product?.attributes?.size} marque={product?.attributes?.marque} bigFormat={true}/>
               )}
             </Grid>
           </div>
@@ -24,7 +24,7 @@ const AllProducts=({products})=>{
             <h2 className="font-italic mb-4">All products</h2>
             <div className="colShoes">
               {products?.length > 0 && products.map((product,index)=>
-                <ProductUi key={index} id={product?.id} name={product?.attributes?.name} image={product?.attributes?.image} price={product?.attributes?.price} size={product?.attributes?.size} marque={product?.attributes?.marque} bigFormat={true}/>
+                <ProductUi key={index} id={product?.id} isAvailable={product?.attributes?.isAvailable} name={product?.attributes?.name} image={product?.attributes?.image} price={product?.attributes?.price} size={product?.attributes?.size} marque={product?.attributes?.marque} bigFormat={true}/>
               )}
             </div>
           </div>
