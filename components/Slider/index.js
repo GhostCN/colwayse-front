@@ -14,7 +14,7 @@ const Slider=({sliders}) =>{
             alt="Image Empty"
           />
           <Carousel.Caption>
-            <h1 className="mt-md-0 mt-4">{slider?.attributes?.name}</h1>
+            <h1 className="mt-md-0 mt-4">{slider?.attributes?.titre}</h1>
             <p style={{color:"black"}} className="d-md-block d-none">{slider?.attributes?.description}</p>
 {/*            <a className="btn btn-outline-light btn-slider">Acheter</a>*/}
           </Carousel.Caption>
