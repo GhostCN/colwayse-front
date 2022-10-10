@@ -37,7 +37,7 @@ font-size: 24px;
   place-items: center;
   width: 5.5vw;
 }
-@media only screen and (max-width: 410px)
+@media only screen and (max-width: 767px)
 {
   .card{
     width: 17rem !important;
