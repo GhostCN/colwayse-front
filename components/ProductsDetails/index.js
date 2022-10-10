@@ -23,7 +23,7 @@ const ProductsDetails=({product})=>{
     <>
       <div className={`container d-flex justify-content-between flex-md-row flex-column p-0`}>
         <div className={`border w-md-50 w-100 mt-md-5 mt-5`} style={{border:"1px #dfdfdf"}}>
-          {image &&  <Image src={process.env.NEXT_PUBLIC_IMG_SERVER+image} alt="" className="w-100 h-100" style={{transform:"scale(0.8)"}}/>}
+          {image &&  <Image src={image.startsWith('/')?process.env.NEXT_PUBLIC_IMG_SERVER+image:image} alt="" className="w-100 h-100" style={{transform:"scale(0.8)"}}/>}
         </div>
         <div className="mt-md-5 border p-md-5 px-5 pb-4 w-md-50 w-100">
          <h2 className="font-italic font-weight-bolder text-center" style={{marginTop:20,color:"#f25862"}}>{product?.name}</h2>
@@ -52,7 +52,7 @@ const ProductsDetails=({product})=>{
       <div className="d-flex flex-row mt-md-4 mt-4 container p-0">
         {product?.imagesOthers?.data?.map((image, index) =>
           <Image key={index} className={`mr-4 w-md-25 w-25 ${styles.otherShoes}`}
-                 src={process.env.NEXT_PUBLIC_IMG_SERVER + image.attributes.url} alt=""
+                 src={image.attributes.url.startsWith('/') ? process.env.NEXT_PUBLIC_IMG_SERVER + image.attributes.url: image.attributes.url} alt=""
                  style={{border: "1px solid #ddd", cursor: "pointer"}}
                  onClick={() => changeImage(image?.attributes?.url)}/>
         )}
