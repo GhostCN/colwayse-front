@@ -37,11 +37,17 @@ font-size: 24px;
   place-items: center;
   width: 5.5vw;
 }
-@media only screen and (max-width: 767px)
-{
+@media only screen and (max-width: 390px) {
   .card{
     width: 17rem !important;
   }
+}
+@media only screen and (max-width: 767px)
+{
+  .card{
+    width: 19rem;
+  }
+
   .otherShoes{
     min-width: 35% !important;
   }
