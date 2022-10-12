@@ -10,7 +10,7 @@ const AllProducts=({products})=>{
       {products?.length > 0 &&
       <MediaContextProvider>
         <Media greaterThan={'lg'}>
-          <div className="container mt-5 px-0">
+          <div className="container mt-5">
             <h2 className="font-italic mb-4">All products</h2>
             <Grid rowGap={40} columnGap={40} repeat={3}>
               {products?.length > 0 && products?.map((product,index)=>
@@ -20,7 +20,7 @@ const AllProducts=({products})=>{
           </div>
         </Media>
         <Media lessThan="lg">
-          <div className="container mt-5">
+          <div className="container mt-5 px-0">
             <h2 className="font-italic mb-4">All products</h2>
             <div className="colShoes">
               {products?.length > 0 && products.map((product,index)=>
