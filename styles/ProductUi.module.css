@@ -42,7 +42,7 @@ font-size: 24px;
     width: 17rem !important;
   }
 }
-@media only screen and (max-width: 767px)
+@media only screen and (max-width: 768px)
 {
   .card{
     width: 19rem;
@@ -61,9 +61,9 @@ font-size: 24px;
     width: 30%;
   }
   .cardImage{
-    max-height: 75vw;
+    max-height: 75vw !important;
   }
   .card {
-    height: 92vw;
+    height: 90vw;
   }
 }

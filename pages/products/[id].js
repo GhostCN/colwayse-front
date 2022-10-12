@@ -3,6 +3,7 @@ import ProductsDetails from "../../components/ProductsDetails";
 import FeaturedProduct from "../../components/FeaturedProduct";
 import {Application} from "../../lib/Application";
 import {ROUTE_ALL_PRODUCT} from "../../utils/Constante";
+import BreadcrumbColwayse from "../../components/Breadcrumb";
 
 const PageDetails = ({products,product}) => {
   return (

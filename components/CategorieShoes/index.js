@@ -4,14 +4,14 @@ const CategorieShoes=()=>{
   return (
     <div className={`${styles.categorieShoes} container mt-md-5 mt-4 px-0`} data-aos="fade-down" id="allShoes">
       <div className="mens">
-        <a href=""><Image src="/banner5.jpg" alt=""/></a>
+       <Image src="/banner5.jpg" alt=""/>
       </div>
       <div className={styles.othersProduct}>
         <div className="new-collection">
-          <a href=""><Image src="/banner6.jpg" alt=""/></a>
+    <Image src="/banner6.jpg" alt=""/>
         </div>
         <div className="new-look">
-          <a href=""><Image src="/banner7.jpg" alt=""/></a>
+         <Image src="/banner7.jpg" alt=""/>
         </div>
       </div>
     </div>
