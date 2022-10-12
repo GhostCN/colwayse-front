@@ -51,7 +51,7 @@ const ProductsDetails=({product})=>{
             <span className="font-weight-bolder" style={styleTitle}>Chaussure</span>
             <span className="font-weight-bolder" style={{color:"#f25862"}}>{product?.isAvailable}</span>
           </div>
-          {product.isAvailable !== 'Vendu' &&
+          {product?.isAvailable !== 'Vendu' &&
           <div className="d-flex justify-content-center">
             <a className="btn btn-outline-light btn-slider mt-md-4 w-100 w-md-50" style={{fontSize: "20px"}}
                onClick={() => setModalShow(true)}>Acheter directement</a>
@@ -80,7 +80,7 @@ const ProductsDetails=({product})=>{
         </Media>
         <Media lessThan={'lg'}>
           <div className="d-flex flex-row mt-md-4 mt-4 container p-0">
-            <Swiper slidesPerView={product.imagesOthers.data.length > 2 ? 2.5 : 2} spaceBetween={5} autoplay={{
+            <Swiper slidesPerView={product?.imagesOthers?.data?.length > 2 ? 2.5 : 2} spaceBetween={5} autoplay={{
               delay: 2000,
               disableOnInteraction: false,
             }} modules={[Autoplay]}>
