@@ -7,9 +7,10 @@ const Footer=()=>{
        <div className="row container info">
          <div className="col col-md-6">
             <div className="personal-info">
-              <span className="font-weight-bold font-italic" >COLWAYSE SHOP</span>
+              <span className="font-weight-bold font-italic" >COLWAYSE STORE</span>
               <ul>
-                <li><BiPhone size={15} className="icone"/> <a className="text-white" href="tel:+221777667971"> +221 77 766 79 71</a></li>
+                <li><BiPhone size={15} className="icone"/> <a className="text-white" href="tel:+221777667971"> +221 76 762 32 36</a></li>
+                <li><BsInstagram size={15} className="icone"/> <a className="text-white" href="https://www.instagram.com/invites/contact/?i=13tdoq4nqeurf&utm_content=oyxp8of">Page Instagram</a></li>
                 <li><BiMailSend size={15} className="icone"/> <a className="text-white" href="mailto:mbackesene93@gmail.com"> mbackesene93@gmail.com</a></li>
                 <li><BsLinkedin size={15} className="icone"/> <a href="https://www.linkedin.com/in/cheikh-mbacke-sene-3b2150164/" className="text-white">https://www.linkedin.com/in/cheikh-mbacke-sene</a></li>
               </ul>

@@ -3,7 +3,7 @@ const Menu=()=>{
   return(
     <Navbar style={{backgroundColor:"#e5e5e5"}} expand="lg">
       <Container>
-        <Navbar.Brand href="/" style={{color:'#f25862',fontWeight:"bold",fontSize:24}} className="font-italic">COLWAYSE SHOP</Navbar.Brand>
+        <Navbar.Brand href="/" style={{color:'#f25862',fontWeight:"bold",fontSize:24}} className="font-italic">COLWAYSE STORE</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="m-auto mr-md-5">
