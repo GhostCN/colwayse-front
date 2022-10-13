@@ -25,7 +25,7 @@ export async function getStaticPaths() {
   }))
   return {
     paths: pages,
-    fallback: false
+    fallback: true
   }
 }
 
