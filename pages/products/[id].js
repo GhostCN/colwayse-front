@@ -23,10 +23,9 @@ export async function getStaticPaths() {
       id: element?.attributes?.name?.toLowerCase().replaceAll(' ', '-')+'_'+element.id
     }
   }))
-
   return {
     paths: pages,
-    fallback: true
+    fallback: false
   }
 }
 
@@ -41,11 +40,9 @@ export async function getStaticProps({params}) {
       }
     }
   );
-
   const props = {
     'product': product,
-    'products': products,
-
+    'products': products
   };
   return {
     props,

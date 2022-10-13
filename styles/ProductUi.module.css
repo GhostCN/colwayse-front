@@ -26,7 +26,7 @@ font-size: 24px;
   max-width: 15% !important;
 }
 .cardImage{
-  max-height: 12.4vw;
+  max-height: 11.8vw;
   transform: scale(0.75);
 }
 .badge{
@@ -36,6 +36,9 @@ font-size: 24px;
   justify-content: space-evenly;
   place-items: center;
   width: 5.5vw;
+}
+.bordure{
+  border-right: 0px !important;
 }
 @media only screen and (max-width: 390px) {
   .card{
@@ -47,7 +50,10 @@ font-size: 24px;
   .card{
     width: 19rem;
   }
-
+  .bordure{
+    border-bottom: 0px !important;
+    border-right: 1px solid #eaeaea !important;
+  }
   .otherShoes{
     min-width: 40vw !important;
     transform: scale(0.75);
