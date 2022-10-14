@@ -21,7 +21,7 @@ export default function Index({products,sliders}) {
     <Layout>
       <Slider sliders={sliders}/>
       <CategorieShoes/>
-      <FeaturedProduct products={products} titre="FEATURED SHOES"/>
+      <FeaturedProduct products={products} titre="Les chaussures tendances"/>
       <MarqueShoes products={products}/>
     </Layout>
   )

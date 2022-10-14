@@ -8,13 +8,15 @@ const FeaturedProduct = ({products, titre}) => {
   const styleP = {
     fontSize: "30px",
     fontWeight: "bolder",
-    fontStyle: "italic"
+    fontStyle: "italic",
   }
   const styleMob = {
     fontSize: "24px",
     fontWeight: "bolder",
     fontStyle: "italic",
-    padding:0
+    padding:0,
+    lineHeight: 1,
+    marginTop: "10px"
   }
   return (
     <div data-aos="zoom-in" className="mt-4 container px-0">
@@ -23,7 +25,7 @@ const FeaturedProduct = ({products, titre}) => {
           <div className="d-flex justify-content-between align-items-center">
             <p style={styleP}>{titre}</p>
             <Link href={'/products'} passHref>
-              <Button variant={"light"}  className="btn btn-outline-light btn-slider" onClick={()=>setAllProduct(products)}>Voir tous les produits</Button>
+              <Button variant={"light"}  className="btn btn-outline-light btn-slider">Voir tout</Button>
             </Link>
           </div>
           <Swiper slidesPerView={3.9} spaceBetween={50} autoplay={{
@@ -41,7 +43,7 @@ const FeaturedProduct = ({products, titre}) => {
           <div className="d-flex justify-content-between align-items-center">
             <p style={styleMob}>{titre}</p>
             <Link href="/products" passHref>
-              <Button variant={"light"}  className="btn btn-outline-light btn-slider">Voir tous les produits</Button>
+              <Button variant={"light"}  className="btn btn-outline-light btn-slider mb-4 w-50">Voir tout</Button>
             </Link>
           </div>
             <div className="colShoes">

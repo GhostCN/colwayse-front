@@ -11,7 +11,7 @@ const AllProducts=({products})=>{
       <MediaContextProvider>
         <Media greaterThan={'lg'}>
           <div className="container mt-5">
-            <h2 className="font-italic mb-4">All products</h2>
+            <h2 className="font-italic mb-4">Tous les baskets</h2>
             <Grid rowGap={40} columnGap={40} repeat={3}>
               {products?.length > 0 && products?.map((product,index)=>
                 <ProductUi key={index} isAvailable={product?.attributes?.isAvailable}  id={product?.id} name={product?.attributes?.name} image={product?.attributes?.image} price={product?.attributes?.price} size={product?.attributes?.size} marque={product?.attributes?.marque} bigFormat={true}/>
@@ -21,7 +21,7 @@ const AllProducts=({products})=>{
         </Media>
         <Media lessThan="lg">
           <div className="container mt-5 px-0">
-            <h2 className="font-italic mb-4">All products</h2>
+            <h2 className="font-italic mb-4">Tous les baskets</h2>
             <div className="colShoes">
               {products?.length > 0 && products.map((product,index)=>
                 <ProductUi key={index} id={product?.id} isAvailable={product?.attributes?.isAvailable} name={product?.attributes?.name} image={product?.attributes?.image} price={product?.attributes?.price} size={product?.attributes?.size} marque={product?.attributes?.marque} bigFormat={true}/>

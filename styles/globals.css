@@ -15,6 +15,9 @@ a {
 * {
   box-sizing: border-box;
 }
+.swiper-slide > .card{
+  height: 22rem;
+}
 .footer{
 height: 400px;
   background: linear-gradient(90deg,#232222 50%,#1d1d1d 50%);
@@ -52,6 +55,12 @@ body.modal-open {
 .navbar-nav > a{
   font-size: 18px;
   color: #1d1d1d !important;
+}
+
+@media only screen and (max-width: 390px) {
+  .colShoes > .card{
+    height: 105vw;
+  }
 }
 @media only screen and (max-width: 768px){
   .carousel-caption h1{
