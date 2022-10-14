@@ -36,7 +36,7 @@ font-size: 24px;
   display: flex;
   justify-content: space-evenly;
   place-items: center;
-  width: 3.5vw;
+  width: 4.5vw;
 }
 .bordure{
   border-right: 0px !important;
