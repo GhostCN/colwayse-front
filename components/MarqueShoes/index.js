@@ -66,7 +66,7 @@ return ()=>{
               }
             </Swiper>
             <div className="mt-5">
-              {isLoading ?<ProductsByMarque products={products} selectedMarque={marque}/>:loading(1)}
+              {isLoading ?<ProductsByMarque products={products} selectedMarque={marque}/>:loading(2)}
             </div>
 
           </div>

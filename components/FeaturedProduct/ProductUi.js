@@ -5,7 +5,7 @@ import {useState} from "react";
 import {AiFillHeart} from "react-icons/ai";
 import {getImage} from "../../utils/getImage";
 
-const ProductUi = ({id, name, image, size, price, marque, tendance, bigFormat, isAvailable}) => {
+const ProductUi = ({slug, name, image, size, price, marque, tendance, bigFormat, isAvailable}) => {
   const [isLiked, setIsLiked] = useState(false)
   const badges = [
     {message: 'Dispo', icon: '😍'},
@@ -15,7 +15,7 @@ const ProductUi = ({id, name, image, size, price, marque, tendance, bigFormat, i
   ];
   return (
     <Card bsPrefix="card" className={`${styles.card} ${bigFormat ? 'w-100' : ''}`}>
-      <Link href={'/products/'+name?.toLowerCase().replaceAll(' ', '-').concat('_', id)}>
+      <Link href={'/products/'+slug}>
         <a><Card.Img variant="top" src={getImage(image)} className={styles.cardImage}/></a>
       </Link>
       <Card.Body>
@@ -25,12 +25,12 @@ const ProductUi = ({id, name, image, size, price, marque, tendance, bigFormat, i
           <span><span style={{color: "gray"}}>Prix</span><span className={styles.price}> {price}</span></span>
         </div>
         <div className="d-flex justify-content-between">
-          <Link href={'/products/'+name?.toLowerCase().replaceAll(' ', '-').concat('_', id)}>
+          <Link href={'/products/'+slug}>
             <a className="btn btn-outline-light btn-slider">Voir en détails</a>
           </Link>
           {
-            badges.map((badge) => badge.message === isAvailable &&
-              <div className={styles.badge}>
+            badges.map((badge,index) => badge.message === isAvailable &&
+              <div className={styles.badge} key={index}>
                 <span>{badge.icon}</span>
                 <span style={{color: "#f25862"}}>{badge.message}</span>
               </div>

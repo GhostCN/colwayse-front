@@ -14,7 +14,7 @@ const AllProducts=({products})=>{
             <h2 className="font-italic mb-4">Tous les baskets</h2>
             <Grid rowGap={40} columnGap={40} repeat={3}>
               {products?.length > 0 && products?.map((product,index)=>
-                <ProductUi key={index} isAvailable={product?.attributes?.isAvailable}  id={product?.id} name={product?.attributes?.name} image={product?.attributes?.image} price={product?.attributes?.price} size={product?.attributes?.size} marque={product?.attributes?.marque} bigFormat={true}/>
+                <ProductUi key={index} isAvailable={product?.attributes?.isAvailable}  slug={product?.attributes?.slug} name={product?.attributes?.name} image={product?.attributes?.image} price={product?.attributes?.price} size={product?.attributes?.size} marque={product?.attributes?.marque} bigFormat={true}/>
               )}
             </Grid>
           </div>
@@ -24,7 +24,7 @@ const AllProducts=({products})=>{
             <h2 className="font-italic mb-4">Tous les baskets</h2>
             <div className="colShoes">
               {products?.length > 0 && products.map((product,index)=>
-                <ProductUi key={index} id={product?.id} isAvailable={product?.attributes?.isAvailable} name={product?.attributes?.name} image={product?.attributes?.image} price={product?.attributes?.price} size={product?.attributes?.size} marque={product?.attributes?.marque} bigFormat={true}/>
+                <ProductUi key={index} slug={product?.attributes?.slug} isAvailable={product?.attributes?.isAvailable} name={product?.attributes?.name} image={product?.attributes?.image} price={product?.attributes?.price} size={product?.attributes?.size} marque={product?.attributes?.marque} bigFormat={true}/>
               )}
             </div>
           </div>
@@ -38,7 +38,7 @@ const AllProducts=({products})=>{
 }
 export async function getStaticProps() {
   const tokenResponse = await Application.auth()
-  const products = await Application.getData({token: tokenResponse, url: ROUTE_ALL_PRODUCT})
+  const products = await Application.getData( {url: ROUTE_ALL_PRODUCT,token:tokenResponse})
   const props = {
     'products': products,
   };

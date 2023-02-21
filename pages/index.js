@@ -20,9 +20,9 @@ export default function Index({products,sliders}) {
   return (
     <Layout>
       <Slider sliders={sliders}/>
-      <CategorieShoes/>
-      <FeaturedProduct products={products} titre="Les chaussures tendances"/>
+ {/*     <CategorieShoes/>*/}
       <MarqueShoes products={products}/>
+      <FeaturedProduct products={products} titre="Les chaussures tendances"/>
     </Layout>
   )
 }

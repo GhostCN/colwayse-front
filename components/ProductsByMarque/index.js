@@ -14,7 +14,7 @@ const ProductsByMarque = ({products, titre,selectedMarque}) => {
           <p style={styleP}>{titre}</p>
           <div className={styles.feauredShoes}>
             {
-              products?.length  > 0 && selectedMarque && products.map((product,index)=> product.attributes.marque===selectedMarque && <ProductUi key={index} id={product.id} isAvailable={product?.attributes?.isAvailable}  name={product.attributes.name} image={product.attributes.image} price={product.attributes.price} size={product.attributes.size} marque={product.attributes.marque}/>
+              products?.length  > 0 && selectedMarque && products.map((product,index)=> product.attributes.marque===selectedMarque && <ProductUi key={index} slug={product?.attributes?.slug} isAvailable={product?.attributes?.isAvailable}  name={product.attributes.name} image={product.attributes.image} price={product.attributes.price} size={product.attributes.size} marque={product.attributes.marque}/>
               )
             }
           </div>
@@ -27,7 +27,7 @@ const ProductsByMarque = ({products, titre,selectedMarque}) => {
           <div className={styles.feauredShoes}>
             {
               products?.length  > 0 && selectedMarque && products.map((product,index)=> product.attributes.marque===selectedMarque &&
-                <SwiperSlide key={index}><ProductUi isAvailable={product?.attributes?.isAvailable}   name={product.attributes.name} image={product.attributes.image} price={product.attributes.price} size={product.attributes.size} marque={product.attributes.marque}/></SwiperSlide>
+                <SwiperSlide key={index}><ProductUi slug={product?.attributes?.slug} isAvailable={product?.attributes?.isAvailable}   name={product.attributes.name} image={product.attributes.image} price={product.attributes.price} size={product.attributes.size} marque={product.attributes.marque}/></SwiperSlide>
               )
             }
           </div>

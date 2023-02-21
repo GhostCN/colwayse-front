@@ -3,13 +3,12 @@ import ProductsDetails from "../../components/ProductsDetails";
 import FeaturedProduct from "../../components/FeaturedProduct";
 import {Application} from "../../lib/Application";
 import {ROUTE_ALL_PRODUCT} from "../../utils/Constante";
-import BreadcrumbColwayse from "../../components/Breadcrumb";
 
-const PageDetails = ({products,product}) => {
+const PageDetails = ({feats,product}) => {
   return (
     <Layout>
-          <ProductsDetails product={product?.attributes}/>
-       <FeaturedProduct products={products} titre="Produits similaires"/>
+          <ProductsDetails product={product?.attributes} id={product?.id}/>
+  {/* {feats && feats?.length > 0 && <FeaturedProduct products={feats} titre="Produits similaires"/>}*/}
     </Layout>
   )
 }
@@ -18,9 +17,9 @@ export async function getStaticPaths() {
   const tokenResponse = await Application.auth()
   const products = await Application.getData({token: tokenResponse, url: ROUTE_ALL_PRODUCT})
   let pages = [];
-  products?.map((element) => pages.push({
+  products?.map((element) => element?.attributes?.slug !== null && pages.push({
     params: {
-      id: element?.attributes?.name?.toLowerCase().replaceAll(' ', '-')+'_'+element.id
+      id: '/products/'+element?.attributes?.slug
     }
   }))
   return {
@@ -31,18 +30,22 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({params}) {
   const id = params.id
-  const tokenResponse = await Application.auth()
-  const products = await Application.getData({token: tokenResponse, url: ROUTE_ALL_PRODUCT})
+  const tokenResponse=await Application.auth()
+  const products = await Application.getData({url: ROUTE_ALL_PRODUCT,token:tokenResponse})
   let product = {};
   products?.map((element) => {
-      if (element?.attributes?.name?.toLowerCase() === id.split('_')[0]?.replaceAll('-', ' ')){
+      if (element?.attributes?.slug === id){
         return product = element
       }
     }
   );
+/*  const featuring=products?.filter((prod=>prod?.attributes?.size===product?.attributes?.size
+  ))
+ const feats=featuring?.filter((feat=>feat.id!==product.id))
+  console.log("feats",feats)*/
   const props = {
     'product': product,
-    'products': products
+  // 'feats': feats
   };
   return {
     props,
