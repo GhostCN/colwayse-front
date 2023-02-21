@@ -26,12 +26,14 @@
     "sass": "^1.54.5",
     "save": "^2.5.0",
     "styled-components": "^5.3.3",
-    "swiper": "^8.3.2"
+    "swiper": "^8.3.2",
+    "react-hook-form": "^7.43.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.0",
     "postcss": "^8.4.14"
+
   }
 }

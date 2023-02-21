@@ -19,8 +19,7 @@ export async function getStaticPaths() {
   let pages = [];
   products?.map((element) => element?.attributes?.slug !== null && pages.push({
     params: {
-      id: '/products/'+element?.attributes?.slug
-    }
+      id: '/products/'+element?.attributes?.slug.trim()}
   }))
   return {
     paths: pages,
@@ -29,12 +28,13 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({params}) {
-  const id = params.id
+  const id = params.id.split('/').pop()
   const tokenResponse=await Application.auth()
   const products = await Application.getData({url: ROUTE_ALL_PRODUCT,token:tokenResponse})
   let product = {};
   products?.map((element) => {
       if (element?.attributes?.slug === id){
+        console.log('Comparaison',id,'VS',element?.attributes?.slug)
         return product = element
       }
     }
